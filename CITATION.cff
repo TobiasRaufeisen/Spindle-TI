@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated publication."
+title: "SpindlePilot: analysis code for temporal-interference stimulation effects on sleep spindles"
+authors:
+  - family-names: Raufeisen
+    given-names: Tobias
+version: "1.0.0"
+date-released: "2026-05-25"
+license: MIT
+repository-code: "https://github.com/TobiasRaufeisen/Spindle-TI"
+# TODO: once the paper is published, add its DOI here as a `preferred-citation`
+#       (type: article, with journal, year, and doi) so citations resolve to the paper.
