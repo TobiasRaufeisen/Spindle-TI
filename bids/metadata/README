@@ -1,0 +1,85 @@
+Sleep spindle modulation by transcranial temporal interference (TI) stimulation
+================================================================================
+
+Overview
+--------
+This dataset contains scalp EEG recordings from 20 healthy young adults (sub-05
+to sub-24) who took a single afternoon nap while receiving counterbalanced
+blocks of transcranial temporal interference (TI) stimulation. Three conditions
+were delivered in counterbalanced order: a 5 Hz envelope frequency, a 1 Hz
+envelope frequency, and a Sham (OFF) control. The primary aim of the study is
+to characterise condition-dependent modulation of sleep spindle properties.
+
+Five additional participants who did not achieve stable N2 or N3 sleep during
+the nap were excluded prior to publication and are not included in this
+dataset. The recorder-side numbering ran from sub-P005 to sub-P024 and has
+been remapped here to sub-05 to sub-24 for clarity. Earlier recorder IDs
+(sub-P001 to sub-P004) correspond to pilot participants and are not shipped.
+
+Acquisition
+-----------
+- System: Brain Products actiCHamp (S/N 20110416), 32-channel scalp EEG.
+- Cap: EasyCap M1 layout, 10-20 placement.
+- Sampling: 10 kHz (downsampled to 500 Hz in derivatives; 256 Hz EDF available
+  on request for sleep staging).
+- Acquisition reference: FCz. Acquisition ground: AFz.
+- Two scalp channels were excluded due to a connector-position mismatch with
+  the EasyCap montage, yielding 30 usable EEG electrodes.
+- EOG: two electrodes placed 1 cm lateral and 1 cm superior to the outer
+  canthi, each referenced to the contralateral mastoid (LOC -> right mastoid,
+  ROC -> left mastoid). EMG: single submental chin electrode.
+- Stimulator: TI Solutions AG, TIBS-R V3.0.
+- TI electrodes: 1.5 cm round rubber pads, Ten20 conductive paste. Frontal
+  pair F7-F8; parietal pair P5-P6 (P5 and P6 do not coincide with EEG sites).
+- Active stimulation conditions:
+    * 1 Hz envelope: pair 1 at 2000 Hz, pair 2 at 2001 Hz, 2 mA zero-to-peak
+      per pair.
+    * 5 Hz envelope: pair 1 at 2000 Hz, pair 2 at 2005 Hz, 2 mA zero-to-peak
+      per pair.
+- Sham (OFF) condition: both channel pairs at 0 Hz and 0 mA. Stimulation
+  was fully ramped down during OFF blocks; no carrier was active.
+- Linear 5 s ramps (at the prevailing carrier frequency) preceded and
+  followed every transition that changed stimulation parameters.
+- Trial structure: 8 s per trial, 5 trials per condition block, 40 s blocks,
+  continuous block sequence for the duration of the nap.
+- Synchronisation: EEG and stimulation markers were synchronised via Lab
+  Streaming Layer (LSL).
+- Setting: Surrey Sleep Research Centre, single daytime session starting
+  approximately 14:00.
+
+Events
+------
+Events were recovered from the LSL StimMarkers stream and stored in each
+subject's _events.tsv. Trial-level markers encode condition, block index, and
+within-block trial index (e.g. '5HZ_001_003' is the third trial of block 1
+in the 5 Hz condition). Ramp segments carry the stim_phase 'rampingUp' or
+'rampingDown' and refractory segments adjacent to ramps carry 'refract'.
+Two boundary markers, STIM_START and STIM_STOP, delimit the overall
+stimulation period.
+
+Derivatives
+-----------
+The directory derivatives/ contains analysis-ready outputs:
+- spindlepilot-preprocessing: epoched FieldTrip MAT files at 500 Hz after the
+  preprocessing pipeline described in the associated analysis repository.
+- comprehensive-analysis: comprehensive_analysis.mat (event tables, sleep
+  stage assignments, trial metadata) and the YASA spindle / slow-wave / sleep
+  stage CSV outputs consumed by the figure scripts.
+
+Large pre-computed time-frequency representations (~25 GB) are not included
+here; they live in a separate archive linked from the analysis repository.
+
+Code
+----
+All analysis and conversion code is published at
+https://github.com/TobiasRaufeisen/Spindle-TI
+
+Ethics and compensation
+-----------------------
+The study was approved by the University of Surrey Ethics Committee
+(FHMS 22-23 123 EGA / ERM 873). Participants received compensation of GBP 40
+plus travel expenses up to GBP 20.
+
+Contact
+-------
+Tobias Raufeisen

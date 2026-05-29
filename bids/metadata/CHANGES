@@ -1,0 +1,5 @@
+1.0.0 TODO_RELEASE_DATE
+ - Initial release: raw EEG (BrainVision, 10 kHz) for sub-05..sub-24,
+   with task-spindleti events recovered from the LSL StimMarkers stream.
+ - Derivatives: spindlepilot-preprocessing (epoched 500 Hz FieldTrip MAT) and
+   comprehensive-analysis (event tables, sleep stages, YASA outputs).

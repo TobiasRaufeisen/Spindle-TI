@@ -1,6 +1,6 @@
-# SpindlePilot Analysis
+# Spindle-TI Analysis
 
-Analysis pipeline for the SpindlePilot study investigating the effects of temporal interference (TI) stimulation on sleep spindles during nap sessions.
+Analysis pipeline for the Spindle-TI study investigating the effects of temporal interference (TI) stimulation on sleep spindles during nap sessions.
 
 **Subjects**: sub5-sub24 (20 participants), Session 1
 **Conditions**: 5 Hz TI stimulation (`x5HZ`), 1 Hz TI stimulation (`x1HZ`), Sham/OFF (`OFF`)
@@ -19,7 +19,6 @@ Spindle-TI/
     functions/                               # Event loading, browser, verification
     eventDetectionResults/                   # Output: comprehensive_analysis.mat
   2_FIGURE1_MethodsAndDetection/             # Figure 1: Methods overview
-    functions/                               # Save helpers
     outputs/                                 # Generated figures
   3_FIGURE2_Power/                           # Figure 2: Spectral power analysis
     functions/                               # Shared TFR/topography helpers
@@ -31,6 +30,8 @@ Spindle-TI/
   4_FIGURE3_Events/                          # Figure 3: Event-based analysis
     outputs/                                 # Generated figures + R statistics
   recordingScripts/                          # Experiment-time stimulation scripts (archival)
+    conditions/                              # Counterbalanced condition orders (CSV, per participant)
+    conditionsTI/                            # Condition orders with OFF collapsed (CSV, per participant)
     setupTesting/                            # Hardware/trigger testing scripts
 ```
 
@@ -147,8 +148,8 @@ Most statistical models are computed *inside* the figure scripts above (e.g. the
 
 | File | Purpose |
 |------|---------|
-| `spindlePilot_paths.m` | Central path resolver for all project directories |
-| `analysis_config.m` | Global analysis parameters + figure appearance defaults |
+| `spindlePilot_paths.m` | Path resolver for the BrewerMap helper and BIDS export |
+| `analysis_config.m` | MATLAB figure/axes appearance defaults |
 | `spindlePilot_add_brewermap.m` | Optional BrewerMap colormap toolbox loader |
 | `spindlePilot_resolve_data_file.m` | Flexible file resolver with wildcard patterns |
 

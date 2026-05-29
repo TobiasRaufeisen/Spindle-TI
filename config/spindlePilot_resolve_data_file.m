@@ -1,23 +1,4 @@
 function file_path = spindlePilot_resolve_data_file(base_dir, patterns, description)
-%SPINDLEPILOT_RESOLVE_DATA_FILE  Resolve data files using flexible patterns.
-%   FILE_PATH = SPINDLEPILOT_RESOLVE_DATA_FILE(BASE_DIR, PATTERNS, DESCRIPTION)
-%   searches the directories listed in BASE_DIR for files matching any of
-%   the wildcard PATTERNS (string or cell array of strings). The search
-%   prioritises the order of PATTERNS first, and then the order of base
-%   directories. The first pattern that yields a match is used and, when
-%   multiple files exist for that pattern, the most recently modified one
-%   is selected. If no matches are found, the function returns an empty
-%   string and prints a warning using DESCRIPTION to explain what was
-%   expected.
-%
-%   Example:
-%       spindle_table = spindlePilot_resolve_data_file(paths.results_root, ...
-%           {'allOutputTables_noCollectiveSpindles*.mat', ...
-%            fullfile('CompiledAnalysisOutput', 'allOutputTables*.mat')}, ...
-%           'spindle summary table');
-%
-%   The helper makes it easier to keep analysis scripts agnostic to the
-%   exact versioned filenames produced by upstream pipelines.
 
     if nargin < 3 || isempty(description)
         description = 'requested file';

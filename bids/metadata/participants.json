@@ -1,0 +1,29 @@
+{
+  "participant_id": {
+    "Description": "Anonymised participant identifier. Sub-05 to sub-24 corresponds to the 20 participants retained after excluding 5 of the initially recruited 25 who did not reach stable N2/N3 sleep."
+  },
+  "age": {
+    "Description": "Age at the time of the nap session, in years.",
+    "Units": "years"
+  },
+  "sex": {
+    "Description": "Self-reported biological sex.",
+    "Levels": {
+      "F": "Female",
+      "M": "Male",
+      "O": "Other",
+      "n/a": "Not available"
+    }
+  },
+  "handedness": {
+    "Description": "Self-reported handedness.",
+    "Levels": {
+      "R": "Right",
+      "L": "Left",
+      "A": "Ambidextrous"
+    }
+  },
+  "order_table_id": {
+    "Description": "Identifier of the counterbalanced condition-order table used during recording. Matches the file recordingScripts/conditions/conditions_<NNN>.csv (and conditionsTI/conditions_<NNN>.csv) in the analysis repository."
+  }
+}

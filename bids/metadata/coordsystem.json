@@ -1,0 +1,5 @@
+{
+  "EEGCoordinateSystem": "Other",
+  "EEGCoordinateUnits": "mm",
+  "EEGCoordinateSystemDescription": "Standard EasyCap M1 template positions (2D layout extended to 3D by setting z=0 in the analysis pipeline). No individual digitisation was performed; electrode locations are nominal template coordinates, not subject-specific."
+}

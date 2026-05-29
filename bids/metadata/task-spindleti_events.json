@@ -1,0 +1,32 @@
+{
+  "trial_type": {
+    "LongName": "Stimulation condition",
+    "Description": "TI stimulation condition for this segment.",
+    "Levels": {
+      "OFF": "Sham: both channel pairs at 0 mA / 0 Hz.",
+      "1HZ": "Active TI at 1 Hz envelope (2000 + 2001 Hz carriers).",
+      "5HZ": "Active TI at 5 Hz envelope (2000 + 2005 Hz carriers).",
+      "BOUNDARY": "Marker delimiting the overall stimulation period (STIM_START / STIM_STOP)."
+    }
+  },
+  "stim_phase": {
+    "LongName": "Stimulation phase within a trial",
+    "Description": "Sub-classification of the trial-level event.",
+    "Levels": {
+      "regular": "Steady-state stimulation trial (no ramp, no refractory).",
+      "rampingUp": "5-second linear carrier-frequency ramp at the start of a new parameter block.",
+      "rampingDown": "5-second linear carrier-frequency ramp at the end of a parameter block.",
+      "refract": "Refractory window adjacent to a ramping segment, excluded from primary analyses.",
+      "boundary": "STIM_START or STIM_STOP marker."
+    }
+  },
+  "block": {
+    "Description": "Block index parsed from the marker label (e.g. 001 in '5HZ_001_003'). Zero for boundary markers."
+  },
+  "trial": {
+    "Description": "Within-block trial index parsed from the marker label (e.g. 003 in '5HZ_001_003'). Zero for boundary markers."
+  },
+  "value": {
+    "Description": "Original LSL marker string from the StimMarkers stream."
+  }
+}

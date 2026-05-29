@@ -1,0 +1,29 @@
+{
+  "Name": "Sleep spindle modulation by transcranial temporal interference stimulation: a daytime nap EEG dataset",
+  "BIDSVersion": "1.10.0",
+  "DatasetType": "raw",
+  "License": "CC0",
+  "Authors": [
+    "Tobias Raufeisen",
+    "M. Gabriela Navas-Zuloaga",
+    "Prince Okyere",
+    "Esra Neufeld",
+    "Niels Kuster",
+    "Derk-Jan Dijk",
+    "Ines R. Violante",
+    "Maxim Bazhenov",
+    "Ullrich Bartsch"
+  ],
+  "Acknowledgements": "n/a",
+  "HowToAcknowledge": "Please cite the associated publication (see ReferencesAndLinks). Tobias Raufeisen and M. Gabriela Navas-Zuloaga are shared first authors and contributed equally. Maxim Bazhenov and Ullrich Bartsch are co-senior (joint last) authors.",
+  "Funding": [
+    "NIH 1R01AG099626",
+    "NIH 1R01MH125557",
+    "NIH 1RF1NS132913",
+    "BBSRC BB/Y011856/1",
+    "UK Dementia Research Institute UKDRI-7206 (through UK DRI Ltd, funded by the UK Medical Research Council with additional funding from Alzheimer's Society)"
+  ],
+  "EthicsApprovals": ["University of Surrey Ethics Committee (FHMS 22-23 123 EGA / ERM 873)"],
+  "ReferencesAndLinks": ["TODO_FILL_BEFORE_PUBLISH (publication DOI)"],
+  "DatasetDOI": "TODO_FILL_AFTER_OPENNEURO_UPLOAD"
+}
